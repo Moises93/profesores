@@ -1,0 +1,63 @@
+graph TD
+    subgraph Capa 1 - Entrada
+        A["Proyecto Devops"]
+        B["GitHub Actions"]
+    end
+
+    subgraph Capa 2 - API y Core
+        C["REST API"]
+        D["Spring Boot App"]
+    end
+
+    subgraph Capa 3 - Componentes y Servicios
+        E["User Service"]
+        F["Authentication Service"]
+        G["Configuration Service"]
+        H["Logging Service"]
+        I["Monitoring Service"]
+        J["Deployment Service"]
+        K["Task Scheduler"]
+    end
+
+    subgraph Capa 4 - Infraestructura
+        L["MySQL Database"]
+        M["Redis Cache"]
+        N["File Storage"]
+        O["Message Queue"]
+        P["External API"]
+    end
+
+    A --> B
+    A --> C
+    C --> D
+    D --> E
+    D --> F
+    D --> G
+    D --> H
+    D --> I
+    D --> J
+    D --> K
+    E --> L
+    F --> L
+    G --> L
+    H --> N
+    I --> O
+    J --> N
+    K --> P
+    D --> M
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#ccf,stroke:#333,stroke-width:2px
+    style C fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#ccf,stroke:#333,stroke-width:2px
+    style E fill:#f9f,stroke:#333,stroke-width:2px
+    style F fill:#ccf,stroke:#333,stroke-width:2px
+    style G fill:#f9f,stroke:#333,stroke-width:2px
+    style H fill:#ccf,stroke:#333,stroke-width:2px
+    style I fill:#f9f,stroke:#333,stroke-width:2px
+    style J fill:#ccf,stroke:#333,stroke-width:2px
+    style K fill:#f9f,stroke:#333,stroke-width:2px
+    style L fill:#ccf,stroke:#333,stroke-width:2px
+    style M fill:#f9f,stroke:#333,stroke-width:2px
+    style N fill:#ccf,stroke:#333,stroke-width:2px
+    style O fill:#f9f,stroke:#333,stroke-width:2px
+    style P fill:#ccf,stroke:#333,stroke-width:2px
